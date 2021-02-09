@@ -9,6 +9,7 @@ class ScheduleHandler extends React.Component {
     super(props);
     this.state = {
       daysVisibleOnPage: false
+      // daysVisibleOnPage: [1,2,3,4,5,6,7]
     };
   }
 
@@ -21,7 +22,7 @@ class ScheduleHandler extends React.Component {
   render(){
     let isScheduleShowing = null;
     let buttonText = null;
-    if(this.state.daysVisibleOnPage) {
+    if(this.state.daysVisibleOnPage) {  //day.key = 0 
       isScheduleShowing = <Schedule/>
       buttonText = "Back to home";
     } else {

@@ -1,7 +1,7 @@
 import React from "react";
 // import '.././App.css';
 import Header from './Header';
-import Schedule from "./Schedule";
+import MonthHandler from "./MonthHandler";
 import ScheduleHandler from './ScheduleHandler';
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
     <>
       <Header />
       <ScheduleHandler />
+      <MonthHandler />
     </>
   );
 }
