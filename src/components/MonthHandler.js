@@ -13,8 +13,8 @@ class MonthHandler extends React.Component {
     };
   }
 
-  handleClick = () => {
-    this.setState({index: this.state.index +1});
+  handleClick = (e) => {
+    this.setState({index:e.target.value});
   }
 
   // Correct
@@ -306,9 +306,19 @@ class MonthHandler extends React.Component {
     
   return (
     <React.Fragment>
-      {/* {console.log(this.monthVisible)} */}
+    <label>
+        <b>What month is it?</b>
+        <select
+          value ={this.state.index}
+          onChange={this.handleClick}
+          >
+            <option disabled selected defaultValue> -- month --</option>
+            {availableProduce.map((e, index) => 
+              <option value={index}>{e.month}</option>
+            )}
+          </select>
+      </label>
       {currentVisibleState}
-      <button onClick = {this.handleClick}>"Next Month"</button>
     </React.Fragment>
     );  
   }

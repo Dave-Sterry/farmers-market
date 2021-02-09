@@ -8,7 +8,11 @@ function Month(props){
       <Container>
         <h4>{props.month}</h4>
           <div class="inner-container">
-            <p>{(props.selection).forEach(e=> <p>e</p>)}</p>
+            <ul>
+              {props.selection.map((e, index)=> 
+              <li id={index}>{e}</li>
+              )}
+            </ul>
           </div>
           <hr/>
       </Container>
